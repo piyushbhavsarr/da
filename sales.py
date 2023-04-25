@@ -18,3 +18,9 @@ regressor.fit(X_train, y_train)
 
 print(f'Coefficients: {regressor.coef_}')
 print(f'Intercept: {regressor.intercept_}')
+
+y_pred = regressor.predict(X_test)
+
+print("R-squared: ", r2_score(y_test, y_pred))
+print("MSE: ", mean_squared_error(y_test, y_pred))
+
